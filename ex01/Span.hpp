@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 13:21:17 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/14 18:05:21 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 19:32:35 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <vector>
 # include <climits>
+# include <iostream>
 
 class Span 
 {
@@ -28,6 +29,7 @@ class Span
 		int getNumber(const unsigned int index) const;
 		unsigned int shortestSpan(void) const;
 		unsigned int longestSpan(void) const;
+		void print(void) const;
 	private:
 		unsigned int _size;
 		std::vector<int> _bucket; 

@@ -6,39 +6,44 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 13:20:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/14 18:40:26 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 19:37:26 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Span.hpp"
 
+Span *fillVector(unsigned int size)
+{
+	Span *v = new Span(size);
+	std::srand(time(NULL));	
+	while (size-- > 0) {
+		v->addNumber(rand());
+	}
+	return v;	
+}
+
 int main(void)
 {
 	try {
-		Span a(2);
-		a.addNumber(2);
-		a.addNumber(3);
-		std::cout << a.getNumber(1) << std::endl;
+		Span sp = Span(5);
+		sp.addNumber(6);
+		sp.addNumber(3);
+		sp.addNumber(17);
+		sp.addNumber(9);
+		sp.addNumber(11);
 
-		Span b(1);
-		b.addNumber(99);
-		b = a;
-		std::cout << "Span b: " << b.getNumber(0) << std::endl;
-		
-		Span c(a);
-		std::cout << "C: " << c.getNumber(1) << std::endl;
+		std::cout << sp.shortestSpan() << std::endl;
+		std::cout << sp.longestSpan() << std::endl;
 
-		Span d(4);
-		d.addNumber(INT_MIN);
-		d.addNumber(INT_MAX);
-		d.addNumber(0);
-		d.addNumber(2);
-		std::cout << "minSpan: " << d.shortestSpan() << std::endl;
-		Span e(1);
-		e.addNumber(9);
-		std::cout << "maxSpan: " << e.longestSpan() << std::endl;
+		Span *sp2 = fillVector(3);
+		std::cout << "sp2: ";
+		sp2->print();
+		std::cout << std::endl;
+		std::cout << sp2->shortestSpan() << std::endl;
+		std::cout << sp2->longestSpan() << std::endl;
 
+		delete sp2;
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}

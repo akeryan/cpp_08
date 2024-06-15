@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 13:21:26 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/14 18:38:45 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/14 19:35:10 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ const Span &Span::operator=(const Span &other)
 		_bucket = other._bucket;
 	}
 	return *this;
+}
+
+void Span::print(void) const
+{
+	for (unsigned int i = 0; i < _bucket.size(); i++) {
+		std::cout << _bucket[i] << " ";
+	}
 }
 
 void Span::addNumber(const int num)
