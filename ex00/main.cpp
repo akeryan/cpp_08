@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 08:04:22 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/14 13:08:08 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/16 10:29:32 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ int main(void)
 
 	std::array<int, 5> a = {6, 9, 8, 9, 9};
 
-	std::cout << "vector: " << easyfind(v, 3) << std::endl;
-	std::cout << "array: " << easyfind(a, 9) << std::endl;
+	std::cout << "vector: " << easyFind(v, 3) << std::endl;
+	std::cout << "array: " << easyFind(a, 9) << std::endl;
 	try {
-		easyfind(a, 33);
+		easyFind(a, 33);
 	} catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}

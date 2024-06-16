@@ -6,7 +6,7 @@
 /*   By: akeryan <akeryan@student.42abudhabi.ae>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/14 13:20:51 by akeryan           #+#    #+#             */
-/*   Updated: 2024/06/14 19:37:26 by akeryan          ###   ########.fr       */
+/*   Updated: 2024/06/16 10:40:34 by akeryan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ int main(void)
 		sp.addNumber(17);
 		sp.addNumber(9);
 		sp.addNumber(11);
+		//sp.addNumber(11);
+		//sp.getNumber(10);
 
 		std::cout << sp.shortestSpan() << std::endl;
 		std::cout << sp.longestSpan() << std::endl;
 
-		Span *sp2 = fillVector(3);
-		std::cout << "sp2: ";
-		sp2->print();
+		Span *sp2 = fillVector(1000);
 		std::cout << std::endl;
 		std::cout << sp2->shortestSpan() << std::endl;
 		std::cout << sp2->longestSpan() << std::endl;
